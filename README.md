@@ -1,0 +1,1 @@
+# qa_magnit_project
