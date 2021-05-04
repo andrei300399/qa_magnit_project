@@ -1,3 +1,3 @@
 @echo off
-cd D:\test_magnit
+cd D:\test_magnit -v
 pytest

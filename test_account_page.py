@@ -1,11 +1,17 @@
 from .pages.account_page import AccountPage
-import time
+from .pages.login_page import LoginPage
+
+USER_LOGIN = "test_user@magnitversion2.onmicrosoft.com"
+USER_PASSWORD = "Docu4647123"
 
 
-def test_guest_can_go_to_login_page(browser):
-    link = "http://localhost:8080/account"
-    page = AccountPage(browser, link)
+def test_exit_from_account(browser):
+    link = "/"
+    page = LoginPage(browser, link)
     page.open()
-    time.sleep(3)
+    page.authorization_exist_user(USER_LOGIN, USER_PASSWORD)
+    link = "http://localhost:8080/lk"
+    page = AccountPage(browser, link)
+    page.exit()
 
 
