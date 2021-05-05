@@ -26,3 +26,4 @@ class AccountPageLocators:
     ACCOUNT_PLUS_BUTTON = (By.CSS_SELECTOR, ".add-number__plus")
     ACCOUNT_SAVE_BUTTON = (By.CSS_SELECTOR, ".card__employee__numbers__button-save")
     ACCOUNT_PHONE = (By.CSS_SELECTOR, ".telephone-number-text")
+    ACCOUNT_PHONE_MINUS_BUTTON = (By.CSS_SELECTOR, "#minus")
