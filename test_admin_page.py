@@ -17,6 +17,7 @@ def admin_page(browser):
     admin_page.open()
     yield admin_page
 
-
+@pytest.mark.xfail
 def test_add_user(admin_page):
     admin_page.add_user()
+    admin_page.remove_user("qqqqq")

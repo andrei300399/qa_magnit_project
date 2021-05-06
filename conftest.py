@@ -12,7 +12,10 @@ def browser(request):
     browser_name = request.config.getoption("browser_name")
     if browser_name == "chrome":
         print("\nstart chrome browser for test..")
-        browser = webdriver.Chrome()
+        options = webdriver.ChromeOptions()
+        options.add_argument("--start-maximized")
+        browser = webdriver.Chrome(chrome_options=options)
+
     elif browser_name == "firefox":
         print("\nstart firefox browser for test..")
         browser = webdriver.Firefox()

@@ -24,6 +24,24 @@ class AdminPageLocators:
     ADMIN_BUTTON_LOAD = (By.CSS_SELECTOR, ".main__menu__form__btn.btn-export")
     ADMIN_FORM_SEARCH = (By.CSS_SELECTOR, ".main__menu__form__search")
     ADMIN_LINK_TO_LK = (By.CSS_SELECTOR, ".nav__list__item__account")
+    ADMIN_ADD_USER_LASTNAME = (By.CSS_SELECTOR, "input[name='lastname']")
+    ADMIN_ADD_USER_FIRSTNAME = (By.CSS_SELECTOR, "input[name='number']")
+    ADMIN_ADD_USER_MIDDLENAME = (By.CSS_SELECTOR, "input[name='middlename']")
+    ADMIN_ADD_USER_EMAIL = (By.CSS_SELECTOR, "input[name='email']")
+    ADMIN_ADD_USER_POST = (By.CSS_SELECTOR, "input[name='post']")
+    ADMIN_ADD_USER_DATE = (By.CSS_SELECTOR, "input[name='dateOfBirth']")
+    ADMIN_ADD_USER_DEPARTMENT = (By.CSS_SELECTOR, "input[name='department']")
+    ADMIN_ADD_USER_SAVE_BUTTON = (By.CSS_SELECTOR, ".edit__card__employee__numbers__button-save")
+    ADMIN_ADD_USER_PLUS_BUTTON = (By.CSS_SELECTOR, ".edit__card__employee__numbers__add-number")
+    ADMIN_ADD_USER_PHONE_INPUT = (By.CSS_SELECTOR, ".edit__telephone-number-text")
+    ADMIN_ADD_CONFIRM_YES = (By.CSS_SELECTOR, ".confirm-message-frame__button-yes")
+    ADMIN_SEARCH_INPUT = (By.CSS_SELECTOR, ".main__menu__form__search__input")
+    ADMIN_SEARCH_BUTTON = (By.CSS_SELECTOR, ".main__menu__form__btn-search-img")
+    ADMIN_ROW_USER = (By.CSS_SELECTOR, ".content-table tbody tr")
+    ADMIN_BUTTON_DELETE = (By.CSS_SELECTOR, ".context-menu__option__delete")
+    ADMIN_NOT_FOUND = (By.CSS_SELECTOR, ".main__table__not-found")
+
+
 
 
 class AccountPageLocators:
