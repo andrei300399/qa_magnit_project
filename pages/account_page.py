@@ -18,20 +18,24 @@ class AccountPage(BasePage):
 
     def not_editable_inputs(self):
         self.should_be_account_form()
-        name_button = self.browser.find_element(*AccountPageLocators.ACCOUNT_INPUT)[0]
-        name_button.send_keys("111111")
-        assert name_button.text != "111111"
+        name_button = self.browser.find_elements(*AccountPageLocators.ACCOUNT_INPUT)[0]
+        try:
+            name_button.send_keys("111111")
+        except:
+            assert name_button.text != "111111"
+        else:
+            assert False
 
     def right_add_or_remove_phone_inputs(self):
         self.should_be_account_form()
-        phones_input = self.browser.find_element(*AccountPageLocators.ACCOUNT_PHONE)
+        phones_input = self.browser.find_elements(*AccountPageLocators.ACCOUNT_PHONE)
         if len(phones_input) < 5:
             plus_button = self.browser.find_element(*AccountPageLocators.ACCOUNT_PLUS_BUTTON)
             plus_button.click()
-            phones_input_after_add = self.browser.find_element(*AccountPageLocators.ACCOUNT_PHONE)
+            phones_input_after_add = self.browser.find_elements(*AccountPageLocators.ACCOUNT_PHONE)
             assert len(phones_input) == len(phones_input_after_add) - 1
         else:
             minus_button = self.browser.find_element(*AccountPageLocators.ACCOUNT_PHONE_MINUS_BUTTON)
             minus_button.click()
-            phones_input_after_remove = self.browser.find_element(*AccountPageLocators.ACCOUNT_PHONE)
+            phones_input_after_remove = self.browser.find_elements(*AccountPageLocators.ACCOUNT_PHONE)
             assert len(phones_input) - 1 == len(phones_input_after_remove)

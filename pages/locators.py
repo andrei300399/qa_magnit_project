@@ -18,7 +18,12 @@ class LoginPageLocators:
 
 
 class AdminPageLocators:
-    pass
+    ADMIN_TABLE = (By.CSS_SELECTOR, ".content-table")
+    ADMIN_BUTTON_SAVE = (By.CSS_SELECTOR, ".main__menu__form__btn.btn-save")
+    ADMIN_BUTTON_ADD_USER = (By.CSS_SELECTOR, ".main__menu__form__btn.btn-add")
+    ADMIN_BUTTON_LOAD = (By.CSS_SELECTOR, ".main__menu__form__btn.btn-export")
+    ADMIN_FORM_SEARCH = (By.CSS_SELECTOR, ".main__menu__form__search")
+    ADMIN_LINK_TO_LK = (By.CSS_SELECTOR, ".nav__list__item__account")
 
 
 class AccountPageLocators:

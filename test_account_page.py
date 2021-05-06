@@ -6,22 +6,17 @@ USER_LOGIN = "test_user@magnitversion2.onmicrosoft.com"
 USER_PASSWORD = "Docu4647123"
 
 
-@pytest.fixture
-def login_page(browser):
+@pytest.fixture(autouse=True)
+def account_page(browser):
     link = "/"
     login_page = LoginPage(browser, link)
     login_page.open()
     login_page.authorization_exist_user(USER_LOGIN, USER_PASSWORD)
-    yield login_page
-
-
-@pytest.fixture(scope="function", autouse=True)
-def account_page(browser):
     link = "/lk"
     account_page = AccountPage(browser, link)
     yield account_page
 
-
+@pytest.mark.xfail
 def test_exit_from_account(account_page):
     account_page.exit()
 
