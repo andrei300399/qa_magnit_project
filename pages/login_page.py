@@ -37,6 +37,8 @@ class LoginPage(BasePage):
         button_continue3.click()
         button_continue4 = self.browser.find_element(*LoginPageLocators.LOGIN_BUTTON_NOT_EXIT)
         button_continue4.click()
+        button_continue6 = self.browser.find_element(*LoginPageLocators.LOGIN_ERROR_TO_HOME)
+        button_continue6.click()
         button_continue5 = self.browser.find_element(*LoginPageLocators.LOGIN_BUTTON_APP_CONTINUE)
         button_continue5.click()
         assert self.is_element_present(*LoginPageLocators.LOGIN_NAME_IN_LK)

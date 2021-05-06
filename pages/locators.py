@@ -13,6 +13,8 @@ class LoginPageLocators:
     LOGIN_BUTTON_APP_CONTINUE = (By.CSS_SELECTOR, ".continue-confirm-message-frame__button-ok")
     LOGIN_BUTTON_NOT_EXIT = (By.CSS_SELECTOR, "#idSIButton9")
     LOGIN_NAME_IN_LK = (By.CSS_SELECTOR, ".card__employee__account-text")
+    LOGIN_ERROR_TO_HOME = (By.CSS_SELECTOR, "li a")
+    LOGIN_BTN_LOG = (By.CSS_SELECTOR, ".btn.btn-primary")
 
 
 class AdminPageLocators:
